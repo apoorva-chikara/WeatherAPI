@@ -5,7 +5,6 @@ const axios = require('axios');
 /* GET home page. */
 
 router.get('/location/search/', async (req, res, next) => {
-    console.log(req.query);
         const { query } = req.query;
         const { data } = await axios(`https://www.metaweather.com/api/location/search/?query=${query}`);
         res.send(data);
